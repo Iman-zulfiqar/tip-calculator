@@ -1,0 +1,281 @@
+@import "cal-var";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+body {
+  background-color: $Light-grayish-cyan;
+}
+.logo {
+  // position: relative;
+  // left: 50%;
+  // top: 60%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // transform: translate(-50%, -50%);
+  margin: 20px auto;
+}
+.cont {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  .main-card {
+    max-width: 1120px;
+    min-height: 60vh;
+    height: auto;
+    width: 100%;
+    border-radius: 30px;
+    margin: 10px auto 5px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 40px;
+    border: none;
+    box-sizing: border-box;
+    .card1 {
+      width: 100%;
+      border: none;
+      max-width: 500px;
+      flex: 1 1 auto;
+      margin: auto;
+      display: flex;
+      gap: 2rem;
+      // justify-content: center;
+      .label1 {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-family: "space mono";
+          font-size: 24px;
+          color: $Grayish-cyan;
+        }
+        div {
+          display: flex;
+          flex-wrap: nowrap;
+          div {
+            height: 50px;
+            margin: 10px 0px;
+            // margin-left: 40px;
+            background-color: $Very-light-grayish-cyan;
+            padding: 0 10px;
+            img {
+              width: 15px;
+              height: 20px;
+              margin-top: 15px;
+              z-index: 3;
+            }
+          }
+          input {
+            position: absolute;
+            width: 100%;
+            // max-width: 400px;
+            height: 50px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            background-color: $Very-light-grayish-cyan;
+            border: none;
+            outline-color: $Strong-cyan;
+            font-family: "space mono";
+            font-size: 24px;
+            color: $Very-dark-cyan;
+            text-align: right;
+            cursor: pointer;
+            padding: 10px 10px;
+            caret-color: $Strong-cyan;
+          }
+          input::placeholder {
+            color: $Grayish-cyan;
+            margin-right: -10px;
+          }
+        }
+      }
+      .label2 {
+        display: flex;
+        flex-direction: column;
+        // max-width: 500px;
+        width: 100%;
+        label {
+          font-family: "space mono";
+          font-size: 24px;
+          color: $Grayish-cyan;
+        }
+        #error {
+          font-family: "space mono";
+          // font-size: 24px;
+          color: rgb(230, 103, 103);
+          align-self: flex-end;
+        }
+        div {
+          display: flex;
+          flex-wrap: nowrap;
+
+          div {
+            height: 50px;
+            margin: 10px 0px;
+            // margin-left: 40px;
+            background-color: $Very-light-grayish-cyan;
+            padding: 0 10px;
+            img {
+              width: 15px;
+              height: 20px;
+              margin-top: 15px;
+              z-index: 3;
+            }
+          }
+          input {
+            position: absolute;
+            width: 100%;
+            // max-width: 400px;
+            height: 50px;
+            margin: 10px 0px;
+            border-radius: 5px;
+            background-color: $Very-light-grayish-cyan;
+            border: none;
+            outline-color: $Strong-cyan;
+            font-family: "space mono";
+            font-size: 24px;
+            color: $Very-dark-cyan;
+            text-align: right;
+            cursor: pointer;
+            padding: 10px 10px;
+            caret-color: $Strong-cyan;
+          }
+          input::placeholder {
+            color: $Grayish-cyan;
+            margin-right: -10px;
+          }
+        }
+      }
+      .l {
+        align-content: space-around;
+        width: 100%;
+        margin-top: 30px;
+        // height: 20px;
+        h6 {
+          font-family: "space mono";
+          font-size: 24px;
+          text-transform: capitalize;
+          color: $Grayish-cyan;
+        }
+        .row {
+          justify-content: space-around;
+          padding: 10px 0px;
+          margin: 0%;
+          gap: 1rem;
+          button {
+            background-color: $Very-dark-cyan;
+            font-family: "space mono";
+            font-size: 24px;
+          }
+          button:hover {
+            background-color: $Strong-cyan;
+            color: $Very-dark-cyan;
+            border: none;
+          }
+
+          input {
+            background-color: $Very-light-grayish-cyan;
+            color: $Very-dark-cyan;
+            font-family: "space mono";
+            font-size: 24px;
+            border: none;
+            caret-color: $Strong-cyan;
+          }
+          input:hover {
+            // border: none;
+            border: 2px solid $Strong-cyan;
+          }
+          input::placeholder {
+            color: $Grayish-cyan;
+          }
+        }
+      }
+    }
+    .card2 {
+      width: 100%;
+      max-width: 500px;
+      flex: 1 1 auto;
+      display: flex;
+      gap: 3rem;
+      margin: auto;
+      background-color: $Very-dark-cyan;
+      border-radius: 20px;
+      padding: 40px 20px;
+      // height: 70vh;
+      .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0%;
+        padding-top: 20px;
+        .col {
+          padding: 0%;
+          h6 {
+            color: white;
+            font-family: "space mono";
+            //   font-size: 24px;
+            text-transform: capitalize;
+          }
+          p {
+            color: $Grayish-cyan;
+            font-family: "space mono";
+            //   font-size: 24px;
+            text-transform: capitalize;
+          }
+        }
+        h1 {
+          color: $Strong-cyan;
+          // float: right;
+        }
+        button {
+          background-color: $Strong-cyan;
+          font-family: "space mono";
+          font-size: 24px;
+          text-transform: uppercase;
+          color: $Very-dark-cyan;
+          border-radius: 5px;
+          margin-top: 80px;
+          border: none;
+        }
+
+        button:hover {
+          background-color: $Light-grayish-cyan;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// media query
+// @media (max-width: 1400px) and (min-width: 400px) {
+//   .main-card {
+//     .card2 {
+//       // padding: 60px 40px;
+//       // padding-left: 20px;
+//       // .row {
+//       //   gap: 0px;
+//       // }
+//     }
+//   }
+// }
